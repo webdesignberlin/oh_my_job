@@ -10,15 +10,16 @@ class JobOfferTest < ActiveSupport::TestCase
     assert_equal [], JobOffer.search('something')
   end
 
-  test "should return job with mathing summary" do
+  test "should return job with matching summary" do
     2.times{ Fabricate.create(:job_offer) }
     job = Fabricate.create(:job_offer, job_summary: "something really cool")
     assert_equal [job], JobOffer.search('something')
   end
 
-  test "controllercase" do
+  test "should return job with matching job_title" do
     Fabricate.create(:job_offer)
-    job = Fabricate.create(:job_offer, job_summary:"serialkiller")
-    assert_equal [job], JobOffer.search('serialkiller')
+    job = Fabricate.create(:job_offer, job_title:"serial killer")
+    assert_equal [job], JobOffer.search('serial killer')
   end
 end
+

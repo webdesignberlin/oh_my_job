@@ -21,7 +21,7 @@ class JobOffersControllerTest < ActionController::TestCase
   test "should get only the result searched" do
     Fabricate.create(:job_offer)
     searched_job = Fabricate.create(:job_offer, job_summary:"serialkiller")
-    get :index, query: "serialkiller"
+    get :index, query: ("serialkiller" " " " ")
     assert_response :success
     assert_equal [searched_job], assigns(:job_offers)
   end

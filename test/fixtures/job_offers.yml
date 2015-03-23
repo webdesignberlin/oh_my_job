@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  document_id: 1
+  job_title: MyString
+  organisation_name: MyString
+  agency_sub_element: MyString
+  salary_min: MyString
+  salary_max: MyString
+  salary_basis: MyString
+  start_date: 2015-03-23
+  end_date: 2015-03-23
+  who_may_apply_text: MyString
+  paypla: MyString
+  series: 1
+  grade: MyString
+  work_schedule: MyString
+  worktype: MyString
+  locations: MyString
+  annoncement_number: MyString
+  job_summary: MyText
+  apply_online_url: MyString
+
+two:
+  document_id: 1
+  job_title: MyString
+  organisation_name: MyString
+  agency_sub_element: MyString
+  salary_min: MyString
+  salary_max: MyString
+  salary_basis: MyString
+  start_date: 2015-03-23
+  end_date: 2015-03-23
+  who_may_apply_text: MyString
+  paypla: MyString
+  series: 1
+  grade: MyString
+  work_schedule: MyString
+  worktype: MyString
+  locations: MyString
+  annoncement_number: MyString
+  job_summary: MyText
+  apply_online_url: MyString

@@ -1,0 +1,93 @@
+<%= form_for(@job_offer) do |f| %>
+  <% if @job_offer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@job_offer.errors.count, "error") %> prohibited this job_offer from being saved:</h2>
+
+      <ul>
+      <% @job_offer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :document_id %><br>
+    <%= f.number_field :document_id %>
+  </div>
+  <div class="field">
+    <%= f.label :job_title %><br>
+    <%= f.text_field :job_title %>
+  </div>
+  <div class="field">
+    <%= f.label :organisation_name %><br>
+    <%= f.text_field :organisation_name %>
+  </div>
+  <div class="field">
+    <%= f.label :agency_sub_element %><br>
+    <%= f.text_field :agency_sub_element %>
+  </div>
+  <div class="field">
+    <%= f.label :salary_min %><br>
+    <%= f.text_field :salary_min %>
+  </div>
+  <div class="field">
+    <%= f.label :salary_max %><br>
+    <%= f.text_field :salary_max %>
+  </div>
+  <div class="field">
+    <%= f.label :salary_basis %><br>
+    <%= f.text_field :salary_basis %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br>
+    <%= f.date_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br>
+    <%= f.date_select :end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :who_may_apply_text %><br>
+    <%= f.text_field :who_may_apply_text %>
+  </div>
+  <div class="field">
+    <%= f.label :paypla %><br>
+    <%= f.text_field :paypla %>
+  </div>
+  <div class="field">
+    <%= f.label :series %><br>
+    <%= f.number_field :series %>
+  </div>
+  <div class="field">
+    <%= f.label :grade %><br>
+    <%= f.text_field :grade %>
+  </div>
+  <div class="field">
+    <%= f.label :work_schedule %><br>
+    <%= f.text_field :work_schedule %>
+  </div>
+  <div class="field">
+    <%= f.label :worktype %><br>
+    <%= f.text_field :worktype %>
+  </div>
+  <div class="field">
+    <%= f.label :locations %><br>
+    <%= f.text_field :locations %>
+  </div>
+  <div class="field">
+    <%= f.label :annoncement_number %><br>
+    <%= f.text_field :annoncement_number %>
+  </div>
+  <div class="field">
+    <%= f.label :job_summary %><br>
+    <%= f.text_area :job_summary %>
+  </div>
+  <div class="field">
+    <%= f.label :apply_online_url %><br>
+    <%= f.text_field :apply_online_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -69,6 +69,6 @@ class JobOffersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_offer_params
-      params.require(:job_offer).permit(:document_id, :job_title, :organisation_name, :agency_sub_element, :salary_min, :salary_max, :salary_basis, :start_date, :end_date, :who_may_apply_text, :paypla, :series, :grade, :work_schedule, :worktype, :locations, :annoncement_number, :job_summary, :apply_online_url)
+      params.require(:job_offer).permit(:document_id, :job_title, :organization_name, :agency_sub_element, :salary_min, :salary_max, :salary_basis, :start_date, :end_date, :who_may_apply_text, :pay_plan, :series, :grade, :work_schedule, :work_type, :locations, :announcement_number, :job_summary, :apply_online_url)
     end
 end

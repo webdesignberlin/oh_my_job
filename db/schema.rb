@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150323093140) do
+ActiveRecord::Schema.define(version: 20150323100645) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20150323093140) do
   create_table "job_offers", force: :cascade do |t|
     t.integer  "document_id"
     t.string   "job_title"
-    t.string   "organisation_name"
+    t.string   "organization_name"
     t.string   "agency_sub_element"
     t.string   "salary_min"
     t.string   "salary_max"
@@ -27,41 +27,17 @@ ActiveRecord::Schema.define(version: 20150323093140) do
     t.date     "start_date"
     t.date     "end_date"
     t.string   "who_may_apply_text"
-    t.string   "paypla"
+    t.string   "pay_plan"
     t.integer  "series"
     t.string   "grade"
     t.string   "work_schedule"
-    t.string   "worktype"
+    t.string   "work_type"
     t.string   "locations"
-    t.string   "annoncement_number"
+    t.string   "announcement_number"
     t.text     "job_summary"
     t.string   "apply_online_url"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-  end
-
-  create_table "posts", force: :cascade do |t|
-    t.integer  "document_id"
-    t.string   "job_title"
-    t.string   "organisation_name"
-    t.string   "agency_sub_element"
-    t.string   "salary_min"
-    t.string   "salary_max"
-    t.string   "salary_basis"
-    t.date     "start_date"
-    t.date     "end_date"
-    t.string   "who_may_apply_text"
-    t.string   "paypla"
-    t.integer  "series"
-    t.string   "grade"
-    t.string   "work_schedule"
-    t.string   "worktype"
-    t.string   "locations"
-    t.string   "annoncement_number"
-    t.text     "job_summary"
-    t.string   "apply_online_url"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
 end

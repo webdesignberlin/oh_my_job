@@ -3,7 +3,7 @@
 one:
   document_id: 1
   job_title: MyString
-  organisation_name: MyString
+  organization_name: MyString
   agency_sub_element: MyString
   salary_min: MyString
   salary_max: MyString
@@ -11,20 +11,20 @@ one:
   start_date: 2015-03-23
   end_date: 2015-03-23
   who_may_apply_text: MyString
-  paypla: MyString
+  pay_plan: MyString
   series: 1
   grade: MyString
   work_schedule: MyString
-  worktype: MyString
+  work_type: MyString
   locations: MyString
-  annoncement_number: MyString
+  announcement_number: MyString
   job_summary: MyText
   apply_online_url: MyString
 
 two:
   document_id: 1
   job_title: MyString
-  organisation_name: MyString
+  organization_name: MyString
   agency_sub_element: MyString
   salary_min: MyString
   salary_max: MyString
@@ -32,12 +32,12 @@ two:
   start_date: 2015-03-23
   end_date: 2015-03-23
   who_may_apply_text: MyString
-  paypla: MyString
+  pay_plan: MyString
   series: 1
   grade: MyString
   work_schedule: MyString
-  worktype: MyString
+  work_type: MyString
   locations: MyString
-  annoncement_number: MyString
+  announcement_number: MyString
   job_summary: MyText
   apply_online_url: MyString

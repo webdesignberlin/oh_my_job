@@ -1,15 +1,14 @@
 class JobOffer < ActiveRecord::Base
 
   def self.search(query)
-    puts "Query is : #{query}"
 
-    if query["job_summary"] = "" || query["job_title"] == "" || query["location"] = ""
+    if query == nil
       self.all
     elsif query
-      query = query.map { |key,value| value.split(' ').join(' & ') }
-      where("to_tsvector(job_summary) @@ to_tsquery('#{query[1]}') \
-            or to_tsvector(job_title) @@ to_tsquery('#{query[2]}') \
-            or to_tsvector(locations) @@ to_tsquery('#{query[3]}')")
+      pg_query = query.split(' ').join(' & ')
+      where("to_tsvector(job_summary) @@ to_tsquery('#{pg_query}') \
+            or to_tsvector(job_title) @@ to_tsquery('#{pg_query}') \
+            or to_tsvector(locations) @@ to_tsquery('#{pg_query}')")
     else
       where(false)
     end
